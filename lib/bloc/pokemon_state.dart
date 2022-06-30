@@ -1,4 +1,4 @@
-import 'package:prueba_tecnica/pokemon_page_response.dart';
+import 'package:prueba_tecnica/data/pokemon_page_response.dart';
 import 'package:flutter/material.dart';
 
 abstract class PokemonState {}

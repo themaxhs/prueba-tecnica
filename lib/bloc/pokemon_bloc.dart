@@ -1,6 +1,6 @@
 import 'package:prueba_tecnica/bloc/pokemon_event.dart';
 import 'package:prueba_tecnica/bloc/pokemon_state.dart';
-import 'package:prueba_tecnica/pokemon_repository.dart';
+import 'package:prueba_tecnica/data/pokemon_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
