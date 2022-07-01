@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final pokemonDetailsCubit = PokemonDetailsCubit();
     return MaterialApp(
-      theme: Theme.of(context).copyWith(
-          primaryColor: Colors.red,
-          colorScheme:
-              ColorScheme.fromSwatch().copyWith(secondary: Colors.redAccent)),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
       home: MultiBlocProvider(providers: [
         BlocProvider(
             create: (context) =>
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
             create: (context) =>
                 NavCubit(pokemonDetailsCubit: pokemonDetailsCubit)),
         BlocProvider(create: (context) => pokemonDetailsCubit)
-      ], child: AppNavigator()),
+      ], child: const AppNavigator()),
     );
   }
 }

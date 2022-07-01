@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:prueba_tecnica/bloc/pokemon_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,7 +13,15 @@ class PokedexView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('Select your group of pokemons!');
+        },
+        backgroundColor: Colors.red,
+        child: const Icon(Icons.add),
+      ),
       appBar: AppBar(
+        centerTitle: true,
         title: const Text('Pokedex'),
       ),
       body: BlocBuilder<PokemonBloc, PokemonState>(
