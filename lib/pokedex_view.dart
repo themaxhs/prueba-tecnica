@@ -21,6 +21,20 @@ class PokedexView extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: GestureDetector(
+              onTap: () {
+                print('Exit!');
+              },
+              child: const Icon(
+                Icons.exit_to_app,
+                size: 26.0,
+              ),
+            ),
+          ),
+        ],
         centerTitle: true,
         title: const Text('Pokedex'),
       ),
